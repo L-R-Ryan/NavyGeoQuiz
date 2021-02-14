@@ -6,8 +6,6 @@ from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 import random
 
-from helpers import apology
-
 # Configure application
 app = Flask(__name__)
 
