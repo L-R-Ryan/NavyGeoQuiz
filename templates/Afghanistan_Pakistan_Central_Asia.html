@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Afghanistan Pakistan Central Asia
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Afghanistan_Pakistan_Central_Asia.jpg')}}" class="image" />
+        <div class="form-group position-absolute border border-danger" style="left:585px; top:357px">
+            <input autocomplete="off" autofocus class="form-control" name="Tajikistan" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:305px; top:567px">
+            <input autocomplete="off" autofocus class="form-control" name="Afghanistan" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:385px; top:738px">
+            <input autocomplete="off" autofocus class="form-control" name="Pakistan" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:512px; top:510px">
+            <input autocomplete="off" autofocus class="form-control" name="Kabul" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:585px; top:553px">
+            <input autocomplete="off" autofocus class="form-control" name="Islamabad" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:383px; top:646px">
+            <input autocomplete="off" autofocus class="form-control" name="Kandahar" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:714px; top:740px">
+            <input autocomplete="off" autofocus class="form-control" name="Delhi" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Afghanistan_Pakistan_Central_Asia.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

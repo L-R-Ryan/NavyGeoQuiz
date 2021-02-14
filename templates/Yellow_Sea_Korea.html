@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Yellow Sea Korea
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Yellow_Sea_Korea.jpg')}}" class="image" />
+        <div class="form-group position-absolute border border-danger" style="left:748px; top:249px">
+            <input autocomplete="off" autofocus class="form-control" name="Korea (North)" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:841px; top:506px">
+            <input autocomplete="off" autofocus class="form-control" name="Korea (South)" placeholder="enter" type="text">
+        </div>
+         <div class="form-group position-absolute border border-primary" style="left:555px; top:680px">
+            <input autocomplete="off" autofocus class="form-control" name="Yellow Sea" placeholder="enter" type="text">
+        </div>
+         <div class="form-group position-absolute border border-primary" style="left:907px; top:731px">
+            <input autocomplete="off" autofocus class="form-control" name="Korea Strait" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:370px; top:336px">
+            <input autocomplete="off" autofocus class="form-control" name="Bo Hai (Gulf of Chihli)" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:512px; top:354px">
+            <input autocomplete="off" autofocus class="form-control" name="Dalican" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:691px; top:323px">
+            <input autocomplete="off" autofocus class="form-control" name="Pyongyang" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:843px; top:451px">
+            <input autocomplete="off" autofocus class="form-control" name="Seoul" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:942px; top:658px">
+            <input autocomplete="off" autofocus class="form-control" name="Busan" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:770px; top:472px">
+            <input autocomplete="off" autofocus class="form-control" name="Incheon" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:437px; top:594px">
+            <input autocomplete="off" autofocus class="form-control" name="Quingdao" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Yellow_Sea_Korea.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Score
+{% endblock %}
+
+{% block main %}
+
+
+    <div class="transbox">
+     <table class="table">
+            <tr>
+                <th>Correct Answer</th>
+                <th>Your Answer</th>
+                <th>Correct?</th>
+            </tr>
+        <tbody>
+        {% for answer in answers_to_score %}
+        <tr>
+           <td> {{ answer['correct'] }} </td>
+           <td> {{ answer['user_input'] }}</td>
+           <td <p><font color="{{ answer['color'] }}"> {{ answer['is_correct'] }} </td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    </div>
+        <div class="score_img">
+            <img src="{{url_for('static', filename=img_id)}}" />
+    </div>
+
+    <form action="/quiz" method="post">
+        <button class="btn btn-primary" name="scorer" value={{slide_id}} type="submit">Continue</button>
+    </form>
+{% endblock %}

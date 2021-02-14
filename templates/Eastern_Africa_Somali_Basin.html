@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Eastern Africa Somali Basin
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Eastern_Africa_Somali_Basin.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:383px; top:257px">
+            <input autocomplete="off" autofocus class="form-control" name="Sudan" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:223px; top:352px">
+            <input autocomplete="off" autofocus class="form-control" name="Central African Republic" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:419px; top:340px">
+            <input autocomplete="off" autofocus class="form-control" name="South Sudan" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:540px; top:330px">
+            <input autocomplete="off" autofocus class="form-control" name="Ethiopia" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:649px; top:394px">
+            <input autocomplete="off" autofocus class="form-control" name="Somalia" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:541px; top:452px">
+            <input autocomplete="off" autofocus class="form-control" name="Kenya" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:462px; top:545px">
+            <input autocomplete="off" autofocus class="form-control" name="Tanzania" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:653px; top:508px">
+            <input autocomplete="off" autofocus class="form-control" name="Somali Basin" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:641px; top:273px">
+            <input autocomplete="off" autofocus class="form-control" name="Djibouti" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:545px; top:478px">
+            <input autocomplete="off" autofocus class="form-control" name="Nairobi" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:685px; top:439px">
+            <input autocomplete="off" autofocus class="form-control" name="Mogadishu" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Eastern_Africa_Somali_Basin.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

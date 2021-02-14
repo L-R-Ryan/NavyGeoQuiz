@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    White Sea
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='White_Sea.jpg')}}" class="image" />
+        <div class="form-group position-absolute border border-primary" style="left:598px; top:504px">
+            <input autocomplete="off" autofocus class="form-control" name="White Sea" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="White_Sea.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

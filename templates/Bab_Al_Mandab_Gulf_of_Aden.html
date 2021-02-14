@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bab Al Mandab Gulf of Aden
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Bab_Al_Mandab_Gulf_of_Aden.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:635px; top:284px">
+            <input autocomplete="off" autofocus class="form-control" name="Yemen" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:878px; top:621px">
+            <input autocomplete="off" autofocus class="form-control" name="Somalia" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:285px; top:734px">
+            <input autocomplete="off" autofocus class="form-control" name="Ethiopia" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:694px; top:530px">
+            <input autocomplete="off" autofocus class="form-control" name="Gulf of Aden" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:470px; top:414px">
+            <input autocomplete="off" autofocus class="form-control" name="Bab al Mandab" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:607px; top:441px">
+            <input autocomplete="off" autofocus class="form-control" name="Aden" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:506px; top:540px">
+            <input autocomplete="off" autofocus class="form-control" name="Djibouti" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Bab_Al_Mandab_Gulf_of_Aden.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

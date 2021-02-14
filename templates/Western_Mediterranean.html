@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Western Mediterranean
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Western_Mediterranean.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:367px; top:409px">
+            <input autocomplete="off" autofocus class="form-control" name="Spain" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:704px; top:488px">
+            <input autocomplete="off" autofocus class="form-control" name="Mediterranean Sea" placeholder="enter" type="text">
+        </div>
+         <div class="form-group position-absolute border border-primary" style="left:943px; top:248px">
+            <input autocomplete="off" autofocus class="form-control" name="Adriatic Sea" placeholder="enter" type="text">
+        </div>
+         <div class="form-group position-absolute border border-primary" style="left:286px; top:576px">
+            <input autocomplete="off" autofocus class="form-control" name="Strait of Gibraltar" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:223px; top:453px">
+            <input autocomplete="off" autofocus class="form-control" name="Lisbon" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:597px; top:531px">
+            <input autocomplete="off" autofocus class="form-control" name="Algiers" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:911px; top:689px">
+            <input autocomplete="off" autofocus class="form-control" name="Tripoli" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Western_Mediterranean.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

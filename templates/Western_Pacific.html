@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Western Pacific
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Western_Pacific.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:367px; top:466px">
+            <input autocomplete="off" autofocus class="form-control" name="The Philippines" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:675px; top:448px">
+            <input autocomplete="off" autofocus class="form-control" name="Guam" placeholder="enter" type="text">
+        </div>
+         <div class="form-group position-absolute border border-danger" style="left:1031px; top:330px">
+            <input autocomplete="off" autofocus class="form-control" name="Wake Island" placeholder="enter" type="text">
+        </div>
+         <div class="form-group position-absolute border border-danger" style="left:254px; top:667px">
+            <input autocomplete="off" autofocus class="form-control" name="Borneo" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:292px; top:746px">
+            <input autocomplete="off" autofocus class="form-control" name="Indonesia" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:433px; top:427px">
+            <input autocomplete="off" autofocus class="form-control" name="Philippine Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:234px; top:449px">
+            <input autocomplete="off" autofocus class="form-control" name="South China Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:333px; top:553px">
+            <input autocomplete="off" autofocus class="form-control" name="Sulu Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:369px; top:440px">
+            <input autocomplete="off" autofocus class="form-control" name="Manila" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Western_Pacific.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

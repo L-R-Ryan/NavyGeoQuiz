@@ -1,0 +1,31 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Strait of Malacca Java Sea
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Strait_of_Malacca_Java_Sea.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:548px; top:382px">
+            <input autocomplete="off" autofocus class="form-control" name="Malaysia" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:798px; top:450px">
+            <input autocomplete="off" autofocus class="form-control" name="Borneo" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:929px; top:597px">
+            <input autocomplete="off" autofocus class="form-control" name="Indonesia" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:513px; top:432px">
+            <input autocomplete="off" autofocus class="form-control" name="Singapore" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:387px; top:351px">
+            <input autocomplete="off" autofocus class="form-control" name="Strait of Malacca" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:603px; top:668px">
+            <input autocomplete="off" autofocus class="form-control" name="Jakarta" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Strait_of_Malacca_Java_Sea.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

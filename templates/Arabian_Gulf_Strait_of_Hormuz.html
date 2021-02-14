@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Arabian Gulf Strait of Hormuz
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Arabian_Gulf_Strait_of_Hormuz.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:762px; top:302px">
+            <input autocomplete="off" autofocus class="form-control" name="Iran" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:226px; top:338px">
+            <input autocomplete="off" autofocus class="form-control" name="Kuwait" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:425px; top:545px">
+            <input autocomplete="off" autofocus class="form-control" name="Bahran" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:455px; top:620px">
+            <input autocomplete="off" autofocus class="form-control" name="Qatar" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:225px; top:724px">
+            <input autocomplete="off" autofocus class="form-control" name="Saudi Arabia" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:540px; top:745px">
+            <input autocomplete="off" autofocus class="form-control" name="United Arab Emirates" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:446px; top:465px">
+            <input autocomplete="off" autofocus class="form-control" name="Arabian Gulf" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:755px; top:535px">
+            <input autocomplete="off" autofocus class="form-control" name="Strait of Hormuz" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:883px; top:661px">
+            <input autocomplete="off" autofocus class="form-control" name="Gulf of Oman" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:289px; top:317px">
+            <input autocomplete="off" autofocus class="form-control" name="Kuwait City" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:497px; top:431px">
+            <input autocomplete="off" autofocus class="form-control" name="Bushehr" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:763px; top:489px">
+            <input autocomplete="off" autofocus class="form-control" name="Bandar Abbas" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:617px; top:685px">
+            <input autocomplete="off" autofocus class="form-control" name="Abu Dhabi" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:678px; top:630px">
+            <input autocomplete="off" autofocus class="form-control" name="Dubai" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Arabian_Gulf_Strait_of_Hormuz.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Eastern Africa Somali Basin
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Eastern_Mediterranean_Suez.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:954px; top:294px">
+            <input autocomplete="off" autofocus class="form-control" name="Syria" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:853px; top:366px">
+            <input autocomplete="off" autofocus class="form-control" name="Lebanon" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:790px; top:618px">
+            <input autocomplete="off" autofocus class="form-control" name="Israel" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:872px; top:623px">
+            <input autocomplete="off" autofocus class="form-control" name="Jordon" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:220px; top:396px">
+            <input autocomplete="off" autofocus class="form-control" name="Mediterranean Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:678px; top:669px">
+            <input autocomplete="off" autofocus class="form-control" name="Suez Canal" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:812px; top:394px">
+            <input autocomplete="off" autofocus class="form-control" name="Beirut" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:791px; top:480px">
+            <input autocomplete="off" autofocus class="form-control" name="Haifa" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:731px; top:560px">
+            <input autocomplete="off" autofocus class="form-control" name="Gaza" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:662px; top:591px">
+            <input autocomplete="off" autofocus class="form-control" name="Port Said" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Eastern_Mediterranean_Suez.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

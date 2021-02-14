@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Bay of Bengal
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Bay_of_Bengal.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:274px; top:301px">
+            <input autocomplete="off" autofocus class="form-control" name="India" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:990px; top:509px">
+            <input autocomplete="off" autofocus class="form-control" name="Thailand" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:511px; top:610px">
+            <input autocomplete="off" autofocus class="form-control" name="Bay of Bengal" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:1000px; top:698px">
+            <input autocomplete="off" autofocus class="form-control" name="Gulf of Thailand" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:970px; top:582px">
+            <input autocomplete="off" autofocus class="form-control" name="Bangkok" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Bay_of_Bengal.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

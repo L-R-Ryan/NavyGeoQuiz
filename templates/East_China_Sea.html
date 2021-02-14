@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    East China Sea
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='East_China_Sea.jpg')}}" class="image"/>
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:251px; top:360px">
+            <input autocomplete="off" autofocus class="form-control" name="China" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:660px; top:695px">
+            <input autocomplete="off" autofocus class="form-control" name="Taiwan" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:734px; top:243px">
+            <input autocomplete="off" autofocus class="form-control" name="Yellow Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:767px; top:454px">
+            <input autocomplete="off" autofocus class="form-control" name="East China Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:881px; top:321px">
+            <input autocomplete="off" autofocus class="form-control" name="Korea Strait" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:640px; top:674px">
+            <input autocomplete="off" autofocus class="form-control" name="Taiwain Strait" placeholder="enter" type="text">
+        </div>
+         <div class="form-group position-absolute border border-success" style="left:573px; top:385px">
+            <input autocomplete="off" autofocus class="form-control" name="Nanjing" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:703px; top:417px">
+            <input autocomplete="off" autofocus class="form-control" name="Shanghai" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:694px; top:467px">
+            <input autocomplete="off" autofocus class="form-control" name="Ningbo" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:640px; top:539px">
+            <input autocomplete="off" autofocus class="form-control" name="Wenzhou" placeholder="enter" type="text">
+        </div>
+         <div class="form-group position-absolute border border-success" style="left:875px; top:597px">
+            <input autocomplete="off" autofocus class="form-control" name="Naha" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:706px; top:639px">
+            <input autocomplete="off" autofocus class="form-control" name="Taipei" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:424px; top:703px">
+            <input autocomplete="off" autofocus class="form-control" name="Guangzhou" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:475px; top:753px">
+            <input autocomplete="off" autofocus class="form-control" name="Hong Kong" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="East_China_Sea.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

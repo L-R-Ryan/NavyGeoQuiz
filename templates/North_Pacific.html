@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    North Pacific
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='North_Pacific.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:368px; top:651px">
+            <input autocomplete="off" autofocus class="form-control" name="Korea (North)" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:388px; top:687px">
+            <input autocomplete="off" autofocus class="form-control" name="Korea (South)" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:326px; top:701px">
+            <input autocomplete="off" autofocus class="form-control" name="Yellow Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:453px; top:622px">
+            <input autocomplete="off" autofocus class="form-control" name="Sapporo" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:453px; top:691px">
+            <input autocomplete="off" autofocus class="form-control" name="Tokyo" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:411px; top:703px">
+            <input autocomplete="off" autofocus class="form-control" name="Osaka" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:334px; top:643px">
+            <input autocomplete="off" autofocus class="form-control" name="Dalian" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:315px; top:690px">
+            <input autocomplete="off" autofocus class="form-control" name="Qingdao" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:284px; top:729px">
+            <input autocomplete="off" autofocus class="form-control" name="Nanjing" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:338px; top:744px">
+            <input autocomplete="off" autofocus class="form-control" name="Shanghai" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="North_Pacific.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

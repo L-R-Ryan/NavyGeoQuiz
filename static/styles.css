@@ -1,0 +1,114 @@
+body
+{
+   background-size: 100%;
+   background-image: url("ocean0.jpg");
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: 110px;
+    height: 23px;
+    z-index: 1;
+    font-size: small;
+    background: transparent;
+
+}
+
+input[type=text]:focus {
+  background-color: #cce6ff;
+}
+
+
+.image {
+  width: 1000px;
+  height: 750px;
+  left: 150px;
+  top: 120px;
+  position: absolute;
+  z-index: -1;
+}
+
+.score_img
+{
+  width: 1000px;
+  height: 750px;
+}
+
+.btn-primary {
+    border-radius: 50%;
+    left: 1210px;
+    top: 300px;
+    position: fixed;
+    font-size: 34px;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 102,0.80);
+    border-color: black;
+}
+
+.btn-secondary {
+    border-radius: 50%;
+    font-size: 34px;
+    padding: 20px 34px;
+    background-color: rgba(0, 0, 102,0.80);
+    border-color: black;
+}
+
+.checkboxes {
+    columns: 4 8em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+}
+
+label {
+    color:black;
+    font-family: Tahoma;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+div.transbox {
+  margin: 30px;
+  border: 1px solid black;
+  background: rgba(255,255,255,0.20);
+  padding: 10px;
+}
+
+div.transbox p {
+  margin: 5%;
+  color: black;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+table, th, td {
+  border: 2px solid black;
+}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Start
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="post">
+        <button class="btn btn-secondary" type="submit">Start Quiz</button>
+
+    <div class="transbox">
+    <label><input type="checkbox" checked name="selectall" id="selectall" onclick = "eventCheckBox()" />  Check All</label>
+    </div>
+
+<script>
+    function eventCheckBox() {
+	let checkboxs = document.getElementsByTagName("input");
+    for(let i = 1; i < checkboxs.length ; i++)
+    {
+  	    checkboxs[i].checked = !checkboxs[i].checked;
+    }
+    }
+</script>
+
+    <div class="transbox">
+    <ul class="checkboxes">
+    <li><label><input type="checkbox" checked name="Afghanistan_Pakistan_Central_Asia.html" />  Afghanistan/Pakistan/Central Asia</label></li>
+    <li><label><input type="checkbox" checked name="Arabian_Gulf_Strait_of_Hormuz.html" />  Arabian Gulf/Strait of Hormuz</label></li>
+    <li><label><input type="checkbox" checked name="Bab_Al_Mandab_Gulf_of_Aden.html" /> Bab al Mandab/Gulf of Aden</label></li>
+    <li><label><input type="checkbox" checked name="Bay_of_Bengal.html" />  Bay of Bengal</label></li>
+    <li><label><input type="checkbox" checked name="Black_Sea.html" />  Black Sea</label></li>
+    <li><label><input type="checkbox" checked name="East_China_Sea.html" />  East China Sea</label></li>
+    <li><label><input type="checkbox" checked name="Eastern_Africa_Somali_Basin.html" />  Eastern Africa/Somali Basin</label></li>
+    <li><label><input type="checkbox" checked name="Eastern_Mediterranean_Suez.html" />  Eastern Mediterranean/Suez</label></li>
+    <li><label><input type="checkbox" checked name="Europe.html" />  Europe</label></li>
+    <li><label><input type="checkbox" checked name="Japan_Basin.html" />  Japan Basin</label></li>
+    <li><label><input type="checkbox" checked name="Middle_East_Arabian_Sea.html" /> Middle East/Arabian Sea</label></li>
+    <li><label><input type="checkbox" checked name="North_Pacific.html" />  North Pacific</label></li>
+    <li><label><input type="checkbox" checked name="South_Asia.html" />  South Asia</label></li>
+    <li><label><input type="checkbox" checked name="South_China_Sea.html" />  South China Sea</label></li>
+    <li><label><input type="checkbox" checked name="Strait_of_Malacca_Java_Sea.html" />  Strait of Malacca/Java Sea</label></li>
+    <li><label><input type="checkbox" checked name="Western_Africa_Gulf_of_Guinea.html" />  Western Africa/Gulf of Guinea</label></li>
+    <li><label><input type="checkbox" checked name="Western_Mediterranean.html" />  Western Mediterranean</label></li>
+    <li><label><input type="checkbox" checked name="Western_Pacific.html" />  Western Pacific</label></li>
+    <li><label><input type="checkbox" checked name="White_Sea.html" />  White Sea</label></li>
+    <li><label><input type="checkbox" checked name="Yellow_Sea_Korea.html" />  Yellow Sea/Korea</label></li>
+
+</div>
+</form>
+</ul>
+
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Black Sea
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Black_Sea.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:470px; top:253px">
+            <input autocomplete="off" autofocus class="form-control" name="Ukraine" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:228px; top:417px">
+            <input autocomplete="off" autofocus class="form-control" name="Romania" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:240px; top:570px">
+            <input autocomplete="off" autofocus class="form-control" name="Bulgaria" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:465px; top:717px">
+            <input autocomplete="off" autofocus class="form-control" name="Turkey" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:478px; top:538px">
+            <input autocomplete="off" autofocus class="form-control" name="Black Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:414px; top:400px">
+            <input autocomplete="off" autofocus class="form-control" name="Odessa" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:478px; top:483px">
+            <input autocomplete="off" autofocus class="form-control" name="Sevastopol" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:371px; top:630px">
+            <input autocomplete="off" autofocus class="form-control" name="Istanbul" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Black_Sea.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

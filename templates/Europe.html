@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Europe
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Europe.jpg')}}" class="image"/>
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:303px; top:663px">
+            <input autocomplete="off" autofocus class="form-control" name="Spain" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:381px; top:500px">
+            <input autocomplete="off" autofocus class="form-control" name="France" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:526px; top:373px">
+            <input autocomplete="off" autofocus class="form-control" name="Germany" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:654px; top:387px">
+            <input autocomplete="off" autofocus class="form-control" name="Poland" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:768px; top:350px">
+            <input autocomplete="off" autofocus class="form-control" name="Belarus" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:818px; top:446px">
+            <input autocomplete="off" autofocus class="form-control" name="Ukraine" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:740px; top:528px">
+            <input autocomplete="off" autofocus class="form-control" name="Romania" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:747px; top:610px">
+            <input autocomplete="off" autofocus class="form-control" name="Bulgaria" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:867px; top:682px">
+            <input autocomplete="off" autofocus class="form-control" name="Turkey" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:400px; top:250px">
+            <input autocomplete="off" autofocus class="form-control" name="North Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:651px; top:253px">
+            <input autocomplete="off" autofocus class="form-control" name="Baltic Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:600px; top:577px">
+            <input autocomplete="off" autofocus class="form-control" name="Adriatic Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:876px; top:587px">
+            <input autocomplete="off" autofocus class="form-control" name="Black Sea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:282px; top:745px">
+            <input autocomplete="off" autofocus class="form-control" name="Strait of Gibraltar" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:231px; top:698px">
+            <input autocomplete="off" autofocus class="form-control" name="Lisbon" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:825px; top:647px">
+            <input autocomplete="off" autofocus class="form-control" name="Istanbul" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:741px; top:717px">
+            <input autocomplete="off" autofocus class="form-control" name="Athens" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:855px; top:516px">
+            <input autocomplete="off" autofocus class="form-control" name="Odessa" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Europe.html" type="submit">Submit</button>
+    </form>
+{% endblock %}

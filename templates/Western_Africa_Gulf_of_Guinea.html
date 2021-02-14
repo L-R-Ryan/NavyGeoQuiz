@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Western Africa Gulf of Guinea
+{% endblock %}
+
+{% block main %}
+    <form action="/quiz" method="post">
+            <img src="{{url_for('static', filename='Western_Africa_Gulf_of_Guinea.jpg')}}" class="image"/>
+        <div class="form-group position-absolute border border-danger" style="left:647px; top:331px">
+            <input autocomplete="off" autofocus class="form-control" name="Niger" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:632px; top:446px">
+            <input autocomplete="off" autofocus class="form-control" name="Nigeria" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:948px; top:350px">
+            <input autocomplete="off" autofocus class="form-control" name="Sudan" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:962px; top:496px">
+            <input autocomplete="off" autofocus class="form-control" name="South Sudan" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:769px; top:517px">
+            <input autocomplete="off" autofocus class="form-control" name="Central African Republic" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-danger" style="left:1009px; top:711px">
+            <input autocomplete="off" autofocus class="form-control" name="Tanzania" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-primary" style="left:570px; top:587px">
+            <input autocomplete="off" autofocus class="form-control" name="Gulf of Guinea" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:603px; top:552px">
+            <input autocomplete="off" autofocus class="form-control" name="Port Harcourt" placeholder="enter" type="text">
+        </div>
+        <div class="form-group position-absolute border border-success" style="left:648px; top:480px">
+            <input autocomplete="off" autofocus class="form-control" name="Abuja" placeholder="enter" type="text">
+        </div>
+        <button class="btn btn-primary" name="template" value="Western_Africa_Gulf_of_Guinea.html" type="submit">Submit</button>
+    </form>
+{% endblock %}
