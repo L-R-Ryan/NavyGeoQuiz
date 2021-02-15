@@ -1,3 +1,6 @@
+#flask_session may not be included when generating requirements.txt If manually
+#add this flask-session=0.3.1
+
 import os
 
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
@@ -5,6 +8,9 @@ from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 import random
+
+# Configure application
+app = Flask(__name__)
 
 # Configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_FILE_DIR"] = mkdtemp()
@@ -29,8 +35,6 @@ config = {
 conn = mysql.connector.connect(**config)
 cursor = conn.cursor(buffered=True, dictionary=True)
 
-# Configure application
-app = Flask(__name__)
 
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
