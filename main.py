@@ -96,7 +96,7 @@ def quiz():
         slides.append(slide['slide'])
 
     #get tables already created.
-    cursor.execute("SELECT table_name from information_schema.tables where table_name not like 'slides%' and table_name like '"str_user_id+"'")
+    cursor.execute("SELECT table_name from information_schema.tables where table_name not like 'slides%' and table_name like '"+str_user_id+"'")
     tables = cursor.fetchall()
 
     print(slides)
