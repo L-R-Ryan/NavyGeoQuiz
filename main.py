@@ -153,7 +153,7 @@ def quiz():
 
 @app.route("/final_score", methods=["GET", "POST"])
 def final_score():
-    str_user_id = session.get('str_user_id')
+    str_user_id = '%' + session.get('user_id')
     cursor.execute("SELECT table_name from information_schema.tables where table_name not like 'slides%' and table_name like '"+str_user_id+"'")
     tables = cursor.fetchall()
 
