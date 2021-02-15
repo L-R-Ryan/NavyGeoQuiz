@@ -77,26 +77,26 @@ def start():
 def quiz():
 
     #get session variables
-    session['user_id'] = session.get('user_id')
-    session['user_slides'] = session.get('user_slides')
+    user_id = session.get('user_id')
+    user_slides = session.get('user_slides')
 
     answers = {}
     method = request.method
 
     #get slides that the user selected and put them in a list
     slides = []
-    session['str_user_id'] = str(session['user_id']) +'%'
-    print (session['str_user_id'])
-    query = ("select * from "+session['user_slides']+" where slide like '"+session['str_user_id']+"'")
+    session['str_user_id'] = str(user_id) +'%'
+    print (str_user_id)
+    query = ("select * from "+user_slides+" where slide like '"+str_user_id+"'")
     print(query)
-    cursor.execute("select * from "+session['user_slides']+" where slide like '"+session['str_user_id']+"'")
+    cursor.execute("select * from "+user_slides+" where slide like '"+str_user_id+"'")
     get_slides = cursor.fetchall()
 
     for slide in get_slides:
         slides.append(slide['slide'])
 
     #get tables already created.
-    cursor.execute("SELECT table_name from information_schema.tables where table_name not like 'slides%' and table_name like '"+session['str_user_id']+"'")
+    cursor.execute("SELECT table_name from information_schema.tables where table_name not like 'slides%' and table_name like '"str_user_id+"'")
     tables = cursor.fetchall()
 
     print(slides)
@@ -111,14 +111,14 @@ def quiz():
     #direct to final score if <<something>> otherwise render the next template in the list.
     if request.form.get("template") is None:
         if len(slides) > 0:
-            slides[0] = slides[0].split(str(session['user_id']),1)[1]
+            slides[0] = slides[0].split(str(user_id),1)[1]
             return render_template(slides[0])
         return redirect("final_score")
 
     #gets slide id, remove .html to make sql friendly, add session['user_id']
     slide_id = (request.form.get("template"))
     sql_slide_id = slide_id.split('.',1)[0]
-    session['user_slide'] = str(session['user_id']) + sql_slide_id
+    session['user_slide'] = str(user_id) + sql_slide_id
 
     #gets user answers
     for key in request.form:
