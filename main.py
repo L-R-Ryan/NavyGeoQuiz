@@ -182,6 +182,7 @@ def final_score():
             table = t['table_name']
             cursor.execute("drop table if exists "+table)
             conn.commit()
-    #conn.close()
+    conn.close()
+    cursor = conn.cursor(buffered=True, dictionary=True)
     session.clear()
     return render_template("final_score.html", score=score)
