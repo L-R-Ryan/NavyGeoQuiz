@@ -86,17 +86,17 @@ def quiz():
     #get slides that the user selected and put them in a list
     slides = []
     session['str_user_id'] = str(user_id) +'%'
-    print (str_user_id)
-    query = ("select * from "+user_slides+" where slide like '"+str_user_id+"'")
+    print (session['str_user_id'])
+    query = ("select * from "+user_slides+" where slide like '"+session['str_user_id']+"'")
     print(query)
-    cursor.execute("select * from "+user_slides+" where slide like '"+str_user_id+"'")
+    cursor.execute("select * from "+user_slides+" where slide like '"+session['str_user_id']+"'")
     get_slides = cursor.fetchall()
 
     for slide in get_slides:
         slides.append(slide['slide'])
 
     #get tables already created.
-    cursor.execute("SELECT table_name from information_schema.tables where table_name not like 'slides%' and table_name like '"+str_user_id+"'")
+    cursor.execute("SELECT table_name from information_schema.tables where table_name not like 'slides%' and table_name like '"+session['str_user_id']+"'")
     tables = cursor.fetchall()
 
     print(slides)
@@ -152,8 +152,8 @@ def quiz():
 
 @app.route("/final_score", methods=["GET", "POST"])
 def final_score():
-    session['str_user_id'] ='%' + str(session['user_id']) + '%'
-    cursor.execute("SELECT table_name from information_schema.tables where table_name not like 'slides%' and table_name like '"+session['str_user_id']+"'")
+    str_user_id = session.get('str_user_id')
+    cursor.execute("SELECT table_name from information_schema.tables where table_name not like 'slides%' and table_name like '"+str_user_id+"'")
     tables = cursor.fetchall()
 
     total = 0
@@ -174,7 +174,7 @@ def final_score():
     else:
         score = round(100/total * correct)
 
-    cursor.execute("SELECT table_name from information_schema.tables where table_name like '"+session['str_user_id']+"' ")
+    cursor.execute("SELECT table_name from information_schema.tables where table_name like '"+str_user_id+"' ")
     tables = cursor.fetchall()
     print("final score tables are")
     print(tables)
