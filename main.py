@@ -1,5 +1,5 @@
 #flask_session may not be included when generating requirements.txt If manually
-#add this flask-session=0.3.1
+#add this flask-session=0.3.1 and Werkzeug==0.16.0
 
 import os
 
