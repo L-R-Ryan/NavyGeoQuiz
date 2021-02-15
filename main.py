@@ -147,6 +147,7 @@ def quiz():
     img_id = img_id.replace("html", "jpg")
     cursor.execute("select * from "+session['user_slide'])
     answers_to_score = cursor.fetchall()
+    conn.commit()
 
     return render_template("score.html", slide_id=session['user_slide'], answers_to_score=answers_to_score, img_id=img_id)
 
