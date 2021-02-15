@@ -86,7 +86,7 @@ def quiz():
     #get slides that the user selected and put them in a list
     slides = []
     str_user_id = str(user_id) +'%'
-    print (session['str_user_id'])
+    print (str_user_id)
     query = ("select * from "+user_slides+" where slide like '"+str_user_id+"'")
     print(query)
     cursor.execute("select * from "+user_slides+" where slide like '"+str_user_id+"'")
