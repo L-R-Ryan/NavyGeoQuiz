@@ -66,7 +66,7 @@ def start():
     else:
 
         #create a unique id for each user
-        user_id = random.randint(1,10000)
+        user_id = random.randint(1000,9999)
 
         return render_template("start.html")
 
@@ -77,7 +77,7 @@ def quiz():
 
     #get slides that the user selected and put them in a list
     slides = []
-    str_user_id ='%' + str(user_id) +'%'
+    str_user_id = str(user_id) +'%'
     cursor.execute("select * from "+user_slides+" where slide like '"+str_user_id+"'")
     get_slides = cursor.fetchall()
 
@@ -93,6 +93,8 @@ def quiz():
     #remove table from slides if it already exists
     for t in tables:
         table = t['table_name'] + '.html'
+        print ("table is")
+        print (table)
         slides.remove(table)
 
     #direct to final score if <<something>> otherwise render the next template in the list.
