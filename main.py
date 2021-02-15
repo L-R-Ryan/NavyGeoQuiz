@@ -57,12 +57,13 @@ def after_request(response):
 def start():
     if request.method == "POST":
         #create a table of slides unique to a user. Insert the slides the user selected into the table.
-        session['user_slides'] = "slides"+str(session['user_id'])
+        user_id = session.get('user_id')
+        session['user_slides'] = "slides"+str(user_id)
         cursor.execute("create table "+session['user_slides']+" (slide VARCHAR(50))")
         conn.commit()
         for value in request.form:
             if value != 'selectall':
-                cursor.execute("insert into "+session['user_slides']+" (slide) VALUES ('"+str(session['user_id'])+value+"')")
+                cursor.execute("insert into "+session['user_slides']+" (slide) VALUES ('"+str(user_id)+value+"')")
                 conn.commit()
 
         return redirect("quiz")
