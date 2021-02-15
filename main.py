@@ -47,7 +47,7 @@ def after_request(response):
     return response
 
 # Initialize a number for a unique database
-#[session['user_id']] = 0
+session['user_id'] = 0
 #session['user_slide'] = ''
 #session['user_slides'] = ''
 #session['str_user_id'] = ''
@@ -57,7 +57,7 @@ def after_request(response):
 def start():
     # initalize all global variables
     if request.method == "POST":
-
+        global session['user_id']
         #create a table of slides unique to a user. Insert the slides the user selected into the table.
         session['user_slides'] = "slides"+str(session['user_id'])
         cursor.execute("create table "+session['user_slides']+" (slide VARCHAR(50))")
