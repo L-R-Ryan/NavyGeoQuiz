@@ -152,7 +152,7 @@ def quiz():
 
 @app.route("/final_score", methods=["GET", "POST"])
 def final_score():
-    global cursor 
+    global cursor
     str_user_id = str(session.get('user_id')) + '%'
     cursor.execute("SELECT table_name from information_schema.tables where table_name not like 'slides%' and table_name like '"+str_user_id+"'")
     tables = cursor.fetchall()
@@ -183,7 +183,7 @@ def final_score():
             table = t['table_name']
             cursor.execute("drop table if exists "+table)
             conn.commit()
-    conn.close()
+    cursor.close()
     cursor = conn.cursor(buffered=True, dictionary=True)
     session.clear()
     return render_template("final_score.html", score=score)
