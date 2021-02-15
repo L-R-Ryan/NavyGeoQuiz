@@ -31,6 +31,9 @@ config = {
     'database': 'navyquizdb'
 }
 
+conn = mysql.connector.connect(**config)
+cursor = conn.cursor(buffered=True, dictionary=True)
+
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
@@ -67,8 +70,6 @@ def start():
 
         #create a unique id for each user
         session['user_id'] = random.randint(1000,9999)
-        conn = mysql.connector.connect(**config)
-        cursor = conn.cursor(buffered=True, dictionary=True)
 
         return render_template("start.html")
 
@@ -181,6 +182,6 @@ def final_score():
             table = t['table_name']
             cursor.execute("drop table if exists "+table)
             conn.commit()
-    conn.close()
+    #conn.close()
     session.clear()
     return render_template("final_score.html", score=score)
