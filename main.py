@@ -69,7 +69,7 @@ def start():
     else:
 
         #create a unique id for each user
-        session['user_id'] = random.randint(1000,9999)
+        session['user_id'] = str(random.randint(1000,9999))+"navyquiz"
 
         return render_template("start.html")
 
