@@ -38,4 +38,6 @@ The project has evolved considerably since I wrote it for CS50. I have adapted i
 to google app engines so that I can host the project on an actual website. I am
 also using google's sql engine to manage the underlying sql tables. The sql tables
 are all tagged with a unique user id so that multiple people can take the quiz
-at the same time. A cron job deletes the created sql tables on a regular basis.   
+at the same time. A cron job deletes the created sql tables on a regular basis.
+
+This project is now offline. 
